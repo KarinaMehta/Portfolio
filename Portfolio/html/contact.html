@@ -1,0 +1,164 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <title>Contact</title>
+ 
+  <link rel="stylesheet" href="..//css/contact.css">
+ <!-- favicon image -->  
+ <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+ <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+ <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+ <link rel="manifest" href="../favicon/site.webmanifest">
+ <link rel="mask-icon" href="../favicon/safari-pinned-tab.svg" color="#5bbad5">
+ <meta name="msapplication-TileColor" content="#da532c">
+ <meta name="theme-color" content="#ffffff">
+ <!-- normalize css link, used to make our website open in any browser -->
+ <link rel="stylesheet" href="path/to/normalize.css">
+ <!-- font-awesome link -->
+ <script src="https://kit.fontawesome.com/33798f2907.js" crossorigin="anonymous"></script>
+
+<!-- to get the text if the logo doesn't work -->
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  h1{
+    position: absolute;
+width: 1px;
+height: 1px;
+padding: 0;
+margin: -1px;
+overflow: hidden;
+clip: rect(0, 0, 0, 0);
+white-space: nowrap;
+border-width: 0;
+  }
+</style>
+ 
+ </head>
+ 
+ <body>
+ <!-- header section -->
+ <div id="header">
+  <div class="container">
+<!-- nav bar -->
+<nav>
+<img src="../images/name_logo-removebg-preview.svg" class="logo" style="cursor: pointer;">
+<h1>Karina</h1>
+<ul id="sidemenu">
+  <li><a href="../html/home.html">Home</a></li>
+    <li><a href="../html/resume.html">Resume</a></li>
+    <!-- <li><a href="../html/service.html">Services</a></li> -->
+    <li><a href="../html/projects.html">Projects</a></li>
+    <li><a href="../html/contact.html">Contact</a></li>
+  <i class="fas fa-times" onclick="closemenu()"></i>
+</ul>
+<i class="fas fa-bars" onclick="openmenu()"></i>
+</nav>
+   <!-- header text -->
+  <div class="header-text">
+    <h2>Connect with me today!</h2>
+        </div>
+        </div>
+        <a href="#click" data-scroll="smooth" aria-label="wheel" class="mouse-icon hidden-sm">
+          <span class="wheel"></span>
+         </a>
+      </div> 
+
+            <div id="click">
+                <div id="contact">
+                    <div class="container">
+                      <div class="row">
+                        <div class="contact-left">
+                            <br>
+                          <h1 class="subtitle" style="text-align: center;">Get In Touch!</h1>
+                          <p style="text-align: center;color: rgb(54, 123, 111)">
+                            <b>If you like my work and have
+                            <br>some cool project to work on, 
+                            <br>just send me direct message or 
+                            <br>contact me through social sites listed below.</b></p>
+                            <br>
+                            <div class="hover">
+                          <p><i class="fa-solid fa-paper-plane"></i>karinavmehta@gmail.com</p>
+                          <p><i class="fa-solid fa-square-phone"></i>+91-9978068768</p>
+                            </div>
+                          <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/karinamehta1/"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/KarinaMehta"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://x.com/KarinaMehta"><i class="fa-brands fa-twitter-square"></i></a>
+                            <a href="https://www.instagram.com/karina_.1004/"><i class="fa-brands fa-instagram"></i></a>
+                          </div>
+                        </div>
+                        <br>
+                        <div class="contact-right">
+                           <form name="submit-to-google-sheet">  <!--backend portion link-->
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="Email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="7" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn btn2" style="border-radius: 40px;">Submit</button>
+                          </form>
+                          <span id="msg"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                
+                    <!-- footer section  -->
+   <div class="copyright">
+    <h2>Let's create something great together!</h2><br>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/karinamehta1/"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/KarinaMehta"><i class="fa-brands fa-github"></i></a>
+        <a href="https://x.com/KarinaMehta"><i class="fa-brands fa-twitter-square"></i></a>
+        <a href="https://www.instagram.com/karina_.1004/"><i class="fa-brands fa-instagram"></i></a>
+    </div><br>
+
+    <ul class="bottom">
+      <li><a href="../html/home.html">Home</a></li>
+      <li><a href="../html/resume.html">Resume</a></li>
+      <!-- <li><a href="../html/service.html">Services</a></li> -->
+      <li><a href="../html/projects.html">Projects</a></li>
+      <li><a href="../html/contact.html">Contact</a></li>
+      </ul>
+      <br>
+    <p>2024 <i class="fa-regular fa-copyright"></i> Karina Mehta</p>
+  </div>
+
+  <a href="#header" class="top"><i class="fa-solid fa-arrow-up"></i></a> 
+
+            </div>
+            </div>
+
+            <script src="../javascript/home.js"></script>
+
+            <script>
+              // script for form section
+              
+                // Deployment ID
+                //  AKfycbzP-aT7v6Kn6ZpPKB-Uf0MEnWOIKMBmA2KLLpEp0Wr3WIe48YkUfb4ZWO58e-DEyWVI-w
+              
+                // Google Sheet Link
+                // https://docs.google.com/spreadsheets/d/1MNR1SwW3It__vSqChRko3uDE-UPUMwlcnSQMiVDukWA/edit#gid=0
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbzP-aT7v6Kn6ZpPKB-Uf0MEnWOIKMBmA2KLLpEp0Wr3WIe48YkUfb4ZWO58e-DEyWVI-w/exec'
+                const form = document.forms['submit-to-google-sheet']
+                const msg = document.getElementById("msg")
+              
+                form.addEventListener('submit', e => {
+                  e.preventDefault()
+                  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                    .then(response => {
+                      msg.innerHTML = "Message sent successfully"
+                      setTimeout(function(){
+                        msg.innerHTML = ""
+                      },5000)
+                      form.reset()
+                    })
+                    .catch(error => console.error('Error!', error.message))
+                })
+              
+
+            </script>
+
+</body>
+</html>

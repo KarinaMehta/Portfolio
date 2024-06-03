@@ -1,0 +1,339 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    scroll-behavior: smooth;  /* for mouse shape */
+}
+body{
+    background-color: white;
+    color: black;
+}
+
+/* header section */
+#header{
+    /* 16px = 1rem */
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    background-image: url(../images/banner1.svg);  
+    background-position: center;
+    background-size: cover; 
+    padding: 1px;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: fixed;  /* Make the navbar fixed */
+    top: 0;           /* Position it at the top */
+    width: 100%;      /* Full width */
+    z-index: 1000;    /* Make sure it appears above other elements */
+    background-color: white; /* Add a background color if needed */
+    /* margin-left: 10px; */
+    
+}
+nav .fas {
+    display: none;
+}
+.logo {
+    width: 130px;
+    margin-left: 30px;
+}
+nav ul {
+    margin: 0;
+    padding: 10 30px; /* Add padding to the left and right */
+}
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #09544F;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after {
+    width: 100%;
+}
+.header-text{
+    margin-top: 220px;
+    font-size: 25px;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 2s forwards;
+} 
+.header-text h2{
+    font-size: 50px;
+    margin-top: 20px;
+    color:#09544F;
+}
+/* Animate header column */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.mouse-icon {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    height: 37px;
+    width: 26px;
+    margin: auto;
+    z-index: 2;
+    border-radius: 15px;
+    border: 3px solid black;
+    background: white;
+  }
+  .wheel {
+    display: block;
+    position: relative;
+    /* border-radius: 10px; */
+    background: black;
+    width: 1px;
+    height: 8px;
+    top: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    animation-name: down;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation: slideDown 2s linear infinite;
+    transform: translateX(-10%);
+  }
+a{
+    color: rgb(39, 93, 103);
+    text-decoration: none;
+}
+a:-webkit-any-link{
+    cursor: pointer;
+}
+@keyframes slideDown {
+    0% {
+        top: -10%;
+    }
+    100% {
+        top: 87%;
+    }
+}
+
+/* portfolio section */
+#portfolio {
+    padding: 50px 0;
+    background-color: white;
+}
+.subtitle{
+    font-size: 50px;
+    font-weight: 600;
+    color: #255251;
+    padding-top: 0.3rem;
+    margin-top:-20px;
+}
+.work-lists {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+    margin: 10px 30px;
+    height:400px;
+    grid-template-rows: 200px 200px;
+}
+.work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    padding: 17px 10px;
+}
+.work img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.work:hover img {
+    transform: scale(1.1);
+}
+.layer {
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #448d94);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+.layer h3 {
+    font-weight: 400;
+    margin-bottom: 20px;
+    align-items: center;
+    text-align: center;
+    color:aliceblue;
+}
+.layer a {
+    margin-top: 20px;
+    text-decoration: none;
+    color: green;
+    font-size: 18px;
+    line-height: 60px;
+    background: rgb(252, 252, 252);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover .layer {
+    height: 100%;
+}
+.btn {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid red;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: black;
+    transition: background 0.5s;
+}
+.btn:hover {
+    background: green;
+}
+.work {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Popup Styles */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.popup-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    position: relative;
+}
+.popup-content h2 {
+    margin-top: 0;
+}
+.popup-content p {
+    font-size: 16px;
+}
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* footer section  */
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: grey;
+    font-weight: 300;
+    margin-bottom: -75px;
+}
+.copyright i{
+    color: rgb(16, 59, 64);
+}
+.top{
+    position: fixed;
+    bottom: 2.1rem;
+    right: 2.1rem;
+}
+.top i{
+    color: rgb(252, 251, 251);
+    background: rgb(16, 59, 64);
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 0.5rem;
+} 
+.bottom{
+    display: flex; 
+    gap:2rem; 
+    color: transparent; 
+    justify-content: center;
+    color: rgb(18, 18, 18);
+}
+.bottom ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: rgb(54, 123, 111);
+    position: absolute;
+    left:0;
+    bottom: -6px;
+    transition: 0.5s;
+    gap: 2rem;
+}
+.bottom ul li a:hover::after{
+    width: 100%;
+}
+.social-icons a {
+    margin: 0 10px; /* Adjust the value as needed */
+}
